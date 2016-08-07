@@ -1,0 +1,27 @@
+<div id="home">
+  <form ng-submit='findLeader()'>
+    <p>{{allUsers}}</p>
+    <div>
+      <p>What ya doin</p>
+      <select ng-model='selectedCategory'>
+        <option >music</option>
+        <option>dining</option>
+        <option>boardGames</option>
+      </select>
+    </div>
+    <div>
+     <p>Pick your party</p>
+      <select multiple ng-model='selectedUsers'>
+        <option ng-repeat='user in allUsers' value="{{user.id}}" >{{user.firstName}}</option>
+      </select>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-success">Find a Leader</button>
+    </div>
+  </form>
+
+  <h2>{{selectedCategory}}</h2>
+  <h2></h2>
+
+
+</div>

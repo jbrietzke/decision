@@ -6,50 +6,56 @@ var Sequelize = require('sequelize');
 var db = require('../_db');
 
 module.exports = db.define('user', {
-    email: {
-        type: Sequelize.STRING
+    firstName : {
+        type : Sequelize.STRING,
+        allowNull : false,
     },
-    password: {
-        type: Sequelize.STRING
+    lastName : {
+        type : Sequelize.STRING,
+        allowNull : false
     },
-    salt: {
-        type: Sequelize.STRING
+    music : {
+        type : Sequelize.INTEGER,
+        defaultValue : 50
     },
-    twitter_id: {
-        type: Sequelize.STRING
+    dining : {
+        type : Sequelize.INTEGER,
+        defaultValue : 50
     },
-    facebook_id: {
-        type: Sequelize.STRING
+    parties : {
+        type : Sequelize.INTEGER,
+        defaultValue : 50
     },
-    google_id: {
-        type: Sequelize.STRING
-    }
-}, {
-    instanceMethods: {
-        sanitize: function () {
-            return _.omit(this.toJSON(), ['password', 'salt']);
-        },
-        correctPassword: function (candidatePassword) {
-            return this.Model.encryptPassword(candidatePassword, this.salt) === this.password;
-        }
+    boardGames : {
+        type : Sequelize.INTEGER,
+        defaultValue : 50
     },
-    classMethods: {
-        generateSalt: function () {
-            return crypto.randomBytes(16).toString('base64');
-        },
-        encryptPassword: function (plainText, salt) {
-            var hash = crypto.createHash('sha1');
-            hash.update(plainText);
-            hash.update(salt);
-            return hash.digest('hex');
-        }
+    videoGames : {
+        type : Sequelize.INTEGER,
+        defaultValue : 50
     },
-    hooks: {
-        beforeValidate: function (user) {
-            if (user.changed('password')) {
-                user.salt = user.Model.generateSalt();
-                user.password = user.Model.encryptPassword(user.password, user.salt);
-            }
-        }
+    movies : {
+        type : Sequelize.INTEGER,
+        defaultValue : 50
+    },
+    vacations : {
+        type : Sequelize.INTEGER,
+        defaultValue : 50
+    },
+    projects : {
+        type : Sequelize.INTEGER,
+        defaultValue : 50
+    },
+    events : {
+        type : Sequelize.INTEGER,
+        defaultValue : 50
+    },
+    weekendNight : {
+        type : Sequelize.INTEGER,
+        defaultValue : 50
+    },
+    weekdayNight : {
+        type : Sequelize.INTEGER,
+        defaultValue : 50
     }
 });

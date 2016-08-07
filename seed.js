@@ -20,18 +20,19 @@ name in the environment files.
 var chalk = require('chalk');
 var db = require('./server/db');
 var User = db.model('user');
+// var Category = db.model('category')
 var Promise = require('sequelize').Promise;
 
 var seedUsers = function () {
 
     var users = [
         {
-            email: 'testing@fsa.com',
-            password: 'password'
+            firstName: 'Jackson',
+            lastName: 'Brooks'
         },
         {
-            email: 'obama@gmail.com',
-            password: 'potus'
+            firstName: 'Alvin',
+            lastName: 'Halimwid'
         }
     ];
 
