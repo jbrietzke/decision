@@ -21,6 +21,16 @@ app.controller('votingCtrl', function($scope, $stateParams, $state){
     console.log('Down Vote');
   };
 
+  $scope.neutral = function(name){
+    $scope.contestants.forEach(function(e,i,a){
+      if (e[0] === name) {
+        e[1] += 2;
+      }
+    })
+    console.log(name);
+    console.log('Down Vote');
+  };
+
   $scope.winner = function(){
      $scope.contestants.sort(compareSecondColumn).reverse();
      $state.go('winner', {obj : $scope.contestants[0]});

@@ -1,6 +1,6 @@
 
-<div>
-  <div ng-repeat = 'user in allUsers'>
-    <button ng-click='moreDetails(user.id)'>{{user.firstName}}</button>
+<div style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cc/Korea_President_Park_US_Congress_20130507_06.jpg'); height: 600px;">
+  <div ng-repeat = 'user in allUsers' class="centerStage">
+    <button class="btn btn-primary" ng-click='moreDetails(user.id)'>{{user.firstName}} {{user.lastName}}</button>
   </div>
 </div>

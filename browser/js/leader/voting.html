@@ -1,9 +1,10 @@
-<div class="centerLeader">
+<div class="centerStage">
   <h2>We are about to vote</h2>
   <div ng-repeat='person in contestants'>
     <div>
       <h2>{{person[0]}}</h2>
       <button ng-click='upVote(person[0])' class="btn btn-success">Great Leader</button>
+      <button ng-click='neutral(person[0])' class="btn btn-secondary">eh alright Leader</button>
       <button ng-click='downVote(person[0])' class="btn btn-danger">Awful Leader</button>
     </div>
   </div>

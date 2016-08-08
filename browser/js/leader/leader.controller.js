@@ -116,6 +116,7 @@ app.controller('leaderCtrl', function($scope, allUsers, $state){
       })
 
     }
+    console.log($scope.array);
   $state.go('voting', {obj : $scope.array});
   }
 

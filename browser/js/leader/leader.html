@@ -1,4 +1,4 @@
-<div id="home" class="centerLeader" >
+<div id="home" class="centerStage" >
   <form ng-submit='findLeader()'>
     <div>
       <p>What Event are you electing a leader for?</p>
@@ -18,8 +18,8 @@
     </div>
     <div>
      <p>Pick those who are running for the position</p>
-      <select multiple ng-model='selectedUsers' style="width: 150px">
-        <option ng-repeat='user in allUsers' value="{{user.id}}" >{{user.firstName}} {{user.lastName}}</option>
+      <select multiple ng-model='selectedUsers' style="width: 300px">
+        <option ng-repeat="user in allUsers | orderBy: '+id'" value="{{user.id}}" >{{user.firstName}} {{user.lastName}}</option>
       </select>
     </div>
     <div>

@@ -1,13 +1,13 @@
 <section id="home">
-  <div class='col-md-6'>
-    <form name="productForm" ng-submit="createNew()">
+  <div style="background-color: #0052A5">
+    <form name="productForm" ng-submit="createNew()" style="background-image: url('https://cdn-images-1.medium.com/max/1200/1*htibcgBgYe5QC7IA4Rd12w.jpeg')" class="formRight">
         <div class="form-group">
              <label>First Name</label>
-            <input class="form-control" name="name" type="text" ng-model="newUser.firstName" placeholder="John" />
+            <input class="form" name="name" type="text" ng-model="newUser.firstName" placeholder="John" />
         </div>
         <div class="form-group">
           <label>Last Name</label>
-            <input class="form-control" name="price" type="text" ng-model="newUser.lastName" placeholder="Doe" />
+            <input class="form" name="price" type="text" ng-model="newUser.lastName" placeholder="Doe" />
         </div>
         <div class="form-group">
           <label>Music (Integer (1-99))</label>
@@ -56,5 +56,9 @@
         <div class="form-group">
           <button type="submit" class="btn btn-success">Create User</button>
         </div>
+      </form>
+      <div class="col-md-6" >
+
+      </div>
   </div>
 

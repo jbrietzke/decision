@@ -19,7 +19,9 @@ router.put('/user/:id', function(req, res, next){
 })
 ;
 router.get('/', function(req, res, next){
-  User.findAll()
+  User.findAll({
+    order : 'id ASC'
+  })
   .then(function(allUsers){
     res.json(allUsers);
   })
