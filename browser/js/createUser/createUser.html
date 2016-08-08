@@ -3,11 +3,55 @@
     <form name="productForm" ng-submit="createNew()">
         <div class="form-group">
              <label>First Name</label>
-            <input class="form-control" name="name" type="text" ng-model="newUser.firstName" />
+            <input class="form-control" name="name" type="text" ng-model="newUser.firstName" placeholder="John" />
         </div>
         <div class="form-group">
           <label>Last Name</label>
-            <input class="form-control" name="price" type="text" ng-model="newUser.lastName"/>
+            <input class="form-control" name="price" type="text" ng-model="newUser.lastName" placeholder="Doe" />
+        </div>
+        <div class="form-group">
+          <label>Music (Integer (1-99))</label>
+            <input class="form" name="price" type="text"  placeholder="50"  ng-model="newUser.music" placeholder="50" />
+        </div>
+        <div class="form-group">
+          <label>Dining (Integer (1-99))</label>
+            <input class="form" name="price" type="text"  placeholder="50"  ng-model="newUser.dining"/>
+        </div>
+        <div class="form-group">
+          <label>Parties (Integer (1-99))</label>
+            <input class="form" name="price" type="text"  placeholder="50"  ng-model="newUser.parties"/>
+        </div>
+        <div class="form-group">
+          <label>Board Games (Integer (1-99))</label>
+            <input class="form" name="price" type="text"  placeholder="50"  ng-model="newUser.boardGames"/>
+        </div>
+        <div class="form-group">
+          <label>Video Games (Integer (1-99))</label>
+            <input class="form" name="price" type="text"  placeholder="50"  ng-model="newUser.videoGames"/>
+        </div>
+        <div class="form-group">
+          <label>Movies (Integer (1-99))</label>
+            <input class="form" name="price" type="text"  placeholder="50"  ng-model="newUser.movies"/>
+        </div>
+        <div class="form-group">
+          <label>Vacations (Integer (1-99))</label>
+            <input class="form" name="price" type="text"  placeholder="50"  ng-model="newUser.vacations"/>
+        </div>
+        <div class="form-group">
+          <label>Projects (Integer (1-99))</label>
+            <input class="form" name="price" type="text"  placeholder="50"  ng-model="newUser.projects"/>
+        </div>
+        <div class="form-group">
+          <label>Events (Integer (1-99))</label>
+            <input class="form" name="price" type="text"  placeholder="50"  ng-model="newUser.events"/>
+        </div>
+        <div class="form-group">
+          <label>Weekend Night (Integer (1-99))</label>
+            <input class="form" name="price" type="text"  placeholder="50"  ng-model="newUser.weekendNight"/>
+        </div>
+        <div class="form-group">
+          <label>Weekday Night (Integer (1-99))</label>
+            <input class="form" name="price" type="text"  placeholder="50"  ng-model="newUser.weekdayNight"/>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-success">Create User</button>

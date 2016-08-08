@@ -1,5 +1,19 @@
 <section id="home">
-    <div>
-      <p ng-repeat="person in allUsers">{{person}}</p>
+    <div class="header">
+      <h1>Here are our 2016 Candidates</h1>
+    </div>
+    <div ng-repeat="person in allUsers" class="col-md-2" style="border : solid">
+      <p>First Name: {{person.firstName}}</p>
+      <p>Last Name: {{person.lastName}}</p>
+      <p>Music: {{person.music}}</p>
+      <p>Dining : {{person.dining}}</p>
+      <p>Parties: {{person.parties}}</p>
+      <p>Board Games: {{person.boardGames}}</p>
+      <p>Video Games: {{person.videoGames}}</p>
+      <p>Movies: {{person.movies}}</p>
+      <p>Vacations: {{person.vacations}}</p>
+      <p>Events: {{person.events}}</p>
+      <p>Weekend Night: {{person.weekendNight}}</p>
+      <p>Weekday Night: {{person.weekdayNight}}</p>
     </div>
 </section>

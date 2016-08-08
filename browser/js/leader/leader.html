@@ -1,27 +1,29 @@
-<div id="home">
+<div id="home" class="centerLeader" >
   <form ng-submit='findLeader()'>
-    <p>{{allUsers}}</p>
     <div>
-      <p>What ya doin</p>
+      <p>What Event are you electing a leader for?</p>
       <select ng-model='selectedCategory'>
         <option >music</option>
         <option>dining</option>
+        <option>parties</option>
         <option>boardGames</option>
+        <option>videoGames</option>
+        <option>movies</option>
+        <option>vacations</option>
+        <option>projects</option>
+        <option>events</option>
+        <option>weekendNight</option>
+        <option>weekdayNight</option>
       </select>
     </div>
     <div>
-     <p>Pick your party</p>
-      <select multiple ng-model='selectedUsers'>
-        <option ng-repeat='user in allUsers' value="{{user.id}}" >{{user.firstName}}</option>
+     <p>Pick those who are running for the position</p>
+      <select multiple ng-model='selectedUsers' style="width: 150px">
+        <option ng-repeat='user in allUsers' value="{{user.id}}" >{{user.firstName}} {{user.lastName}}</option>
       </select>
     </div>
     <div>
       <button type="submit" class="btn btn-success">Find a Leader</button>
     </div>
   </form>
-
-  <h2>{{selectedCategory}}</h2>
-  <h2></h2>
-
-
 </div>

@@ -1,17 +1,11 @@
-<nav class="navbar navbar-static-top">
+<nav class="navbar navbar-static-top blah">
     <div class="container">
-        <div class="navbar-header">
-            <fullstack-logo></fullstack-logo>
+        <div class="header">
+            <img src="http://static.greatbigcanvas.com/images/square/getty-images/founding-fathers-in-front-of-the-declaration-of-independance-,1826687.jpg?max=128">
         </div>
-        <ul class="nav navbar-nav">
-            <li ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
-                <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
-            </li>
-        </ul>
-        <button ng-show="!user" ui-sref="login" class="btn login-button">Login</button>
-        <div ng-show="user" class="welcome">
-            <span>Welcome, {{ user.email }}!</span>
-            <a ng-click="logout()">Logout</a>
-        </div>
+        <button ui-sref="user" class="btn btn-info">Go to Users</button>
+        <button ui-sref="createUser" class="btn btn-secondary">Create a New User</button>
+        <button ui-sref="leader" type='button' class="btn btn-primary btn-lg">Find your leader</button>
+        <button ui-sref='update' ng-hide='false' class="btn btn-danger">Edit the people</button>
     </div>
 </nav>
